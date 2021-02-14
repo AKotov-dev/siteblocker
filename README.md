@@ -1,4 +1,4 @@
-**SiteBlocker** - маленький блокировщик сайтов и другого контента по времени
+**SiteBlocker** - a small blocker of sites and other content by time
 
 Dependencies: iptables ipset bind-utils (host)
 
