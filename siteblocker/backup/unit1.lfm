@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 293
+  Left = 304
   Height = 482
-  Top = 128
+  Top = 129
   Width = 707
   ActiveControl = Panel1
   Caption = 'SiteBlocker'
@@ -153,6 +153,7 @@ object MainForm: TMainForm
         Height = 36
         Top = 8
         Width = 106
+        Alignment = taRightJustify
         OnChange = MondayCheckChange
         TabOrder = 0
       end
@@ -313,7 +314,7 @@ object MainForm: TMainForm
     Align = alBottom
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2021   URL: https://linuxforum.ru'
     Font.Color = clGray
-    Font.Height = -12
+    Font.Height = -11
     Font.Name = 'Sans'
     ParentFont = False
     TabOrder = 3

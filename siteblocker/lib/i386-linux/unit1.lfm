@@ -1,52 +1,49 @@
 object MainForm: TMainForm
-  Left = 278
-  Height = 446
-  Top = 147
-  Width = 697
+  Left = 293
+  Height = 482
+  Top = 128
+  Width = 707
   ActiveControl = Panel1
   Caption = 'SiteBlocker'
-  ClientHeight = 446
-  ClientWidth = 697
-  OnClose = FormClose
+  ClientHeight = 482
+  ClientWidth = 707
   OnCreate = FormCreate
-  SessionProperties = 'FridayCheck.Checked;Height;LanEdit.Text;Left;MondayCheck.Checked;OnlyWebCheck.Checked;Panel1.Width;SaturdayCheck.Checked;SundayCheck.Checked;ThursdayCheck.Checked;Top;TuesdayCheck.Checked;WanEdit.Text;WednesdayCheck.Checked;Width;StartTime.Text;StopTime.Text'
+  OnShow = FormShow
+  SessionProperties = 'DictionaryCheck.Checked;FridayCheck.Checked;LanEdit.Text;Left;MondayCheck.Checked;OnlyWebCheck.Checked;Panel1.Width;SaturdayCheck.Checked;StartTime.Text;StopTime.Text;SundayCheck.Checked;ThursdayCheck.Checked;Top;TuesdayCheck.Checked;WanEdit.Text;WednesdayCheck.Checked;Height;Width'
   LCLVersion = '2.0.10.0'
   object Panel1: TPanel
     Left = 0
-    Height = 429
+    Height = 462
     Top = 0
-    Width = 187
+    Width = 210
     Align = alLeft
-    ClientHeight = 429
-    ClientWidth = 187
+    ClientHeight = 462
+    ClientWidth = 210
     TabOrder = 0
     object ListBox1: TListBox
       Left = 1
-      Height = 396
+      Height = 429
+      Hint = 'ok.ru'#10'twitter.com'#10'www.tiktok.com'
       Top = 32
-      Width = 185
+      Width = 208
       Align = alBottom
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Top = 8
-      Items.Strings = (
-        'vk.com'
-        'twitter.com'
-        'ok.ru'
-        'tiktok.com'
-      )
-      ItemHeight = 23
-      ItemIndex = 0
+      ItemHeight = 0
       MultiSelect = True
+      ParentShowHint = False
       PopupMenu = PopupMenu1
-      ScrollWidth = 183
+      ScrollWidth = 206
+      ShowHint = True
       TabOrder = 0
+      TopIndex = -1
     end
     object Label1: TLabel
       AnchorSideBottom.Control = ListBox1
       Left = 8
       Height = 15
       Top = 9
-      Width = 91
+      Width = 81
       Anchors = [akLeft, akBottom]
       BorderSpacing.Bottom = 4
       Caption = 'Blocked sites:'
@@ -54,104 +51,106 @@ object MainForm: TMainForm
     end
   end
   object Splitter1: TSplitter
-    Left = 187
-    Height = 429
+    Left = 210
+    Height = 462
     Top = 0
     Width = 5
   end
   object Panel2: TPanel
-    Left = 192
-    Height = 428
+    Left = 215
+    Height = 462
     Top = 0
-    Width = 505
-    ClientHeight = 428
-    ClientWidth = 505
+    Width = 492
+    Align = alClient
+    ClientHeight = 462
+    ClientWidth = 492
     TabOrder = 2
     object GroupBox1: TGroupBox
       Left = 8
       Height = 152
-      Top = 96
-      Width = 488
+      Top = 97
+      Width = 475
+      Anchors = [akTop, akLeft, akRight]
       Caption = 'Days of blocking:'
-      ClientHeight = 133
-      ClientWidth = 484
+      ClientHeight = 134
+      ClientWidth = 473
       TabOrder = 0
       object MondayCheck: TCheckBox
         Left = 9
-        Height = 22
+        Height = 32
         Top = 16
-        Width = 76
+        Width = 82
         Caption = 'Monday'
         OnChange = MondayCheckChange
         TabOrder = 0
       end
       object TuesdayCheck: TCheckBox
         Left = 172
-        Height = 22
+        Height = 32
         Top = 13
-        Width = 77
+        Width = 83
         Caption = 'Tuesday'
         OnChange = MondayCheckChange
         TabOrder = 1
       end
       object WednesdayCheck: TCheckBox
         Left = 330
-        Height = 22
+        Height = 32
         Top = 13
-        Width = 99
+        Width = 104
         Caption = 'Wednesday'
         OnChange = MondayCheckChange
         TabOrder = 2
       end
       object ThursdayCheck: TCheckBox
         Left = 9
-        Height = 22
+        Height = 32
         Top = 56
-        Width = 84
+        Width = 89
         Caption = 'Thursday'
         OnChange = MondayCheckChange
         TabOrder = 3
       end
       object FridayCheck: TCheckBox
         Left = 172
-        Height = 22
+        Height = 32
         Top = 56
-        Width = 64
+        Width = 71
         Caption = 'Friday'
         OnChange = MondayCheckChange
         TabOrder = 4
       end
       object SaturdayCheck: TCheckBox
         Left = 330
-        Height = 22
+        Height = 32
         Top = 56
-        Width = 82
+        Width = 86
         Caption = 'Saturday'
         OnChange = MondayCheckChange
         TabOrder = 5
       end
       object SundayCheck: TCheckBox
         Left = 9
-        Height = 22
+        Height = 32
         Top = 96
-        Width = 72
+        Width = 77
         Caption = 'Sunday'
         OnChange = MondayCheckChange
         TabOrder = 6
       end
     end
     object GroupBox2: TGroupBox
-      Left = 12
+      Left = 8
       Height = 81
       Top = 9
-      Width = 316
+      Width = 320
       Caption = 'Interfaces:'
-      ClientHeight = 62
-      ClientWidth = 312
+      ClientHeight = 63
+      ClientWidth = 318
       TabOrder = 1
       object LanEdit: TEdit
         Left = 160
-        Height = 26
+        Height = 36
         Top = 8
         Width = 106
         OnChange = MondayCheckChange
@@ -164,8 +163,8 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrCenter
         Left = 271
         Height = 15
-        Top = 13
-        Width = 27
+        Top = 18
+        Width = 25
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
         Caption = 'LAN'
@@ -177,7 +176,7 @@ object MainForm: TMainForm
         AnchorSideBottom.Side = asrCenter
         Left = 8
         Height = 15
-        Top = 13
+        Top = 18
         Width = 31
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
@@ -188,7 +187,7 @@ object MainForm: TMainForm
         AnchorSideLeft.Control = Label5
         AnchorSideLeft.Side = asrBottom
         Left = 44
-        Height = 26
+        Height = 36
         Top = 8
         Width = 106
         BorderSpacing.Left = 5
@@ -198,18 +197,19 @@ object MainForm: TMainForm
     end
     object GroupBox3: TGroupBox
       Left = 8
-      Height = 153
-      Top = 264
-      Width = 488
-      ClientHeight = 149
-      ClientWidth = 484
+      Height = 192
+      Top = 261
+      Width = 475
+      Anchors = [akTop, akLeft, akRight]
+      ClientHeight = 190
+      ClientWidth = 473
       Enabled = False
       TabOrder = 2
       object OnlyWebCheck: TCheckBox
         Left = 9
-        Height = 22
-        Top = 8
-        Width = 363
+        Height = 32
+        Top = 48
+        Width = 347
         Caption = 'Only Web surfing (blocking VPN, Torrent, Skype, etc)'
         TabOrder = 0
       end
@@ -218,20 +218,21 @@ object MainForm: TMainForm
         AnchorSideLeft.Side = asrBottom
         AnchorSideBottom.Control = StartTime
         AnchorSideBottom.Side = asrCenter
-        Left = 103
+        Left = 109
         Height = 15
-        Top = 62
-        Width = 107
+        Top = 106
+        Width = 100
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
         Caption = 'Start of blocking'
         ParentColor = False
       end
       object RestartBtn: TBitBtn
-        Left = 296
+        Left = 286
         Height = 30
-        Top = 104
+        Top = 150
         Width = 178
+        Anchors = [akTop, akRight]
         Caption = 'Restart iptables'
         OnClick = RestartBtnClick
         TabOrder = 1
@@ -241,45 +242,64 @@ object MainForm: TMainForm
         AnchorSideLeft.Side = asrBottom
         AnchorSideBottom.Control = StopTime
         AnchorSideBottom.Side = asrCenter
-        Left = 103
+        Left = 109
         Height = 15
-        Top = 109
-        Width = 100
+        Top = 154
+        Width = 95
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 5
         Caption = 'End of blocking'
         ParentColor = False
       end
       object StartTime: TTimeEdit
-        Left = 12
-        Height = 26
-        Top = 57
-        Width = 86
+        Left = 8
+        Height = 36
+        Top = 96
+        Width = 96
         ButtonWidth = 23
         NumGlyphs = 1
         MaxLength = 0
-        OnKeyDown = StartTimeKeyDown
         TabOrder = 2
         Text = '09:00'
       end
       object StopTime: TTimeEdit
-        Left = 12
-        Height = 26
-        Top = 104
-        Width = 86
+        Left = 8
+        Height = 36
+        Top = 144
+        Width = 96
         ButtonWidth = 23
         NumGlyphs = 1
         MaxLength = 0
-        OnKeyDown = StartTimeKeyDown
         TabOrder = 3
         Text = '18:00'
       end
+      object DictionaryCheck: TCheckBox
+        Left = 9
+        Height = 32
+        Top = 8
+        Width = 268
+        Caption = 'Activate the dictionary filtering method'
+        TabOrder = 4
+      end
+      object WorkLabel: TLabel
+        AnchorSideLeft.Control = RestartBtn
+        Left = 286
+        Height = 15
+        Top = 128
+        Width = 92
+        Caption = 'Working, wait...'
+        Font.Color = clGray
+        ParentColor = False
+        ParentFont = False
+        Visible = False
+      end
     end
     object RestoreBtn: TBitBtn
-      Left = 374
+      Left = 361
       Height = 30
       Top = 9
       Width = 122
+      Anchors = [akTop, akRight]
       Caption = 'Reset'
       OnClick = RestoreBtnClick
       TabOrder = 3
@@ -287,20 +307,20 @@ object MainForm: TMainForm
   end
   object StaticText1: TStaticText
     Left = 0
-    Height = 17
-    Top = 429
-    Width = 697
+    Height = 20
+    Top = 462
+    Width = 707
     Align = alBottom
-    Caption = 'License: GPLv2   Author: alex_q_2000 (C) 2021   URL: https://linuxforum.ru'
+    Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2021   URL: https://linuxforum.ru'
     Font.Color = clGray
-    Font.Height = -12
+    Font.Height = -11
     Font.Name = 'Sans'
     ParentFont = False
     TabOrder = 3
   end
   object PopupMenu1: TPopupMenu
-    Left = 120
-    Top = 80
+    Left = 128
+    Top = 48
     object AddItem: TMenuItem
       Caption = 'Add'
       OnClick = AddItemClick
@@ -323,15 +343,15 @@ object MainForm: TMainForm
   end
   object MainFormStorage: TXMLPropStorage
     StoredValues = <>
-    Left = 32
-    Top = 208
+    Left = 40
+    Top = 112
   end
   object OpenDialog1: TOpenDialog
-    Left = 32
-    Top = 144
+    Left = 40
+    Top = 48
   end
   object SaveDialog1: TSaveDialog
-    Left = 120
-    Top = 144
+    Left = 128
+    Top = 112
   end
 end

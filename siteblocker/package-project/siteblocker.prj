@@ -5,7 +5,7 @@ name=siteblocker
 version=1.7
 
 [RELEASE]
-release=0.mrx8
+release=1.mrx8
 
 [GROUP]
 group=Applications/System
@@ -25,7 +25,7 @@ vendor=alex_q_2000 (C) 2021
 summary=Small iptables blocking rule builder
 
 [URLCOPY]
-urlcopy=https://cloud.mail.ru/public/8uiQ/fArDMPyed
+urlcopy=https://github.com/AKotov-dev/siteblocker
 
 [LICENSE]
 license=GPLv3
@@ -41,6 +41,9 @@ noarch=0
 
 [SIGN]
 sign=0
+
+[DEB]
+deb=0
 
 [FILES]
 0=/usr/bin/siteblocker
@@ -82,7 +85,7 @@ sign=0
 28=fi;
 
 [URL32]
-url32=https://cloud.mail.ru/public/8uiQ/fArDMPyed
+url32=https://github.com/AKotov-dev/siteblocker
 
 [URL64]
 url64=
@@ -98,3 +101,6 @@ toolversion=2.0.10
 
 [INFO]
 0=Requires a computer with two network cards and static WAN/LAN ip-addresses.
+1=
+2=v1.7-1
+3=+ search/make work directory /usr/local/bin

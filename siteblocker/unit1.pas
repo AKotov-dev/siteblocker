@@ -359,6 +359,10 @@ var
   output: ansistring;
   S: TStringList;
 begin
+  //Проверяем наличие рабочей папки /usr/local/bin
+  if not DirectoryExists('/usr/local/bin') then
+    StartProcess('mkdir -p /usr/local/bin');
+
   //Перечитываем время (валидность, если ввод был ручным)
   StartTime.Refresh;
   StopTime.Refresh;

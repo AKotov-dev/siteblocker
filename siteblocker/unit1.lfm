@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 293
+  Left = 304
   Height = 482
-  Top = 128
+  Top = 129
   Width = 707
   ActiveControl = Panel1
   Caption = 'SiteBlocker'
