@@ -13,3 +13,5 @@ Testing was performed on Mageia Linux-7/8 and Linux Mint-19.3.
 **Note:** In Mageia Linux, it is advisable to remove the `msec` and `shorewall-core` packages. You do not need to force the system to change the security settings. In Linux Mint (Debian), it is advisable to remove the `ufw` (Uncomplicated Firewall) package.
 
 Made and tested in Mageia Linux-8.
+
+![](https://github.com/AKotov-dev/siteblocker/blob/main/ScreenShot.png)
